@@ -41,18 +41,18 @@ int main()
     if(i_A == i_B && j_A == j_B)
         {
             cout << "Заполните матрицу A, построчно:" << endl;
-            for( j=0; j<j_A; j++ )
+            for( i=0; i<i_A; i++ )
                 {
-                    for (i=0; i<i_A; i++)
+                    for (j=0; j<j_A; j++)
                         {
                             cin >> A[i][j];
                             cout<<" ";
                         }
                 }
             cout << "Заполните матрицу B, построчно:" << endl;
-            for( j=0; j<j_B; j++ )
+            for( i=0; i<i_B; i++ )
                 {
-                    for (i=0; i<i_B; i++)
+                    for (j=0; j<i_B; j++)
                         {
                             cin >> B[i][j];
                             cout<<" ";
@@ -61,10 +61,10 @@ int main()
             cout << "Полученная матрица (A+B):" << endl;
             int i_F = i_B, j_F = j_A;
             double F[i_F][j_F];
-            for( j=0; j<j_F; j++ )
+            for( i=0; i<i_F; i++ )
                 {
                     cout << "|";
-                    for (i=0; i<i_F; i++)
+                    for (j=0; j<j_F; j++)
                         {
                             F[i][j] = A[i][j]+B[i][j];
                             cout<<F[i][j]<<" ";
@@ -97,18 +97,18 @@ int main()
     if(i_A == i_B && j_A == j_B)
         {
             cout << "Заполните матрицу A, построчно:" << endl;
-            for( j=0; j<j_A; j++ )
+            for( i=0; i<i_A; i++ )
                 {
-                    for (i=0; i<i_A; i++)
+                    for (j=0; j<j_A; j++)
                         {
                             cin >> A[i][j];
                             cout<<" ";
                         }
                 }
             cout << "Заполните матрицу B, построчно:" << endl;
-            for( j=0; j<j_B; j++ )
+            for( i=0; i<i_B; i++ )
                 {
-                    for (i=0; i<i_B; i++)
+                    for (j=0; j<j_B; j++)
                         {
                             cin >> B[i][j];
                             cout<<" ";
@@ -117,10 +117,10 @@ int main()
             cout << "Полученная матрица (A-B):" << endl;
             int i_F = i_B, j_F = j_A;
             double F[i_F][j_F];
-            for( j=0; j<j_F; j++ )
+            for( i=0; i<i_F; i++ )
                 {
                     cout << "|";
-                    for (i=0; i<i_F; i++)
+                    for (j=0; j<j_F; j++)
                         {
                             F[i][j] = A[i][j]-B[i][j];
                             cout<<F[i][j]<<" ";
@@ -138,28 +138,28 @@ int main()
     cout << "Вы выбрали умножение матрицы на константу." << endl;
     double x = 0;
     int i_A = 0, j_A = 0;
-    double A[i_A][j_A];
     cout << "Введите размерность матрицы A (Сначала кол-во строк, затем кол-во столбцов):";
     cin >> i_A;
     cout << "x";
     cin >> j_A;
     cout << endl;
+    double A[i_A][j_A];
     cout << "Введите константу для, умножения." <<endl;
     cin >> x;
     cout << "Заполните матрицу A, построчно:" << endl;
-            for( j=0; j<j_A; j++ )
+            for( i=0; i<i_A; i++ )
                 {
-                    for (i=0; i<i_A; i++)
+                    for (j=0; j<j_A; j++)
                         {
                             cin >> A[i][j];
                             cout<<" ";
                         }
                 }
             cout << "Полученная матрица (A*" << x << "):" << endl;
-            for( j=0; j<j_A; j++ )
+            for( i=0; i<i_A; i++ )
                 {
                     cout << "|";
-                    for (i=0; i<i_A; i++)
+                    for (j=0; j<j_A; j++)
                         {
                             A[i][j] *=x;
                             cout<<A[i][j]<<" ";
